@@ -32,6 +32,14 @@ feature 'baby form' do
         'authenticity_token' => 'test token'
       }
 
+      # {"utf8"=>"✓",
+      #  "authenticity_token"=>"SCK4QpCVu1mUeRMc9A5sIYwJp1G5urpfJaQiDYu369Moz9BWZhJ/6YHfPgrDNiS3/R4lfVkjpLJwktpOPT+qsQ==",
+      #  "baby"=>{"first_name"=>"Junior", "last_name"=>"Jeewillikers", "weight"=>"12", "birth_date"=>"2014-02-12"},
+      #  "commit"=>"Create Baby",
+      #  "controller"=>"babies",
+      #  "action"=>"create"}
+
+
       expect(expected_params).to eq test_params
     end
   end
@@ -64,6 +72,16 @@ feature 'baby form' do
         'id'         => baby.id.to_s,
         'authenticity_token' => 'test token'
       }
+
+      # {"utf8"=>"✓",
+      #  "_method"=>"patch",
+      #  "authenticity_token"=>"Cn4KVWit+y4nE4d/S9ZDXCVgCEMqQ2PZUELtEs5U0cUtf1vmcT0jJVwbk3uvLdYxR9c/3MVKbil5A1+p9Y2Dpg==",
+      #  "baby"=>{"first_name"=>"Cupcake", "last_name"=>"Jenkins", "weight"=>"12", "birth_date"=>"2014-02-14 05:00:00.000000"},
+      #  "commit"=>"Update Baby",
+      #  "controller"=>"babies",
+      #  "action"=>"update",
+      #  "id"=>"1"}
+
 
       expect(expected_params).to eq test_params
     end

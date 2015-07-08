@@ -14,4 +14,5 @@ class ConcretesController < ApplicationController
   def update
     render nothing: true
   end
+
 end

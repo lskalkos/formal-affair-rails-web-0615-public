@@ -1,6 +1,7 @@
 class BabiesController < ApplicationController
   def new
     @baby = Baby.new
+    @baby.birth_date = Time.new()
   end
 
   def create
